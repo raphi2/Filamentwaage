@@ -2,9 +2,9 @@
 
 Created by: Bader Raphael, Brockschmidt Sophia, Moser Anna
 
-###Verwendete Bibliotheken:
+### Verwendete Bibliotheken:
 
-###Verwendete Hardware: 
+### Verwendete Hardware: 
 
 - Microcontoller: ESP32 Vroom
 - Sensor: Wägezelle 5kg
