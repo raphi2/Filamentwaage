@@ -12,6 +12,8 @@ Created by: Bader Raphael, Brockschmidt Sophia, Moser Anna
 
 ### Verwendete Bibliotheken:
 
+![alt text](https://github.com/raphi2/Filamentwaage/blob/master/Fotos/3D_Konzept.jpg?raw=true)
+
 ![alt text](https://github.com/raphi2/Filamentwaage/blob/master/Fotos/Steckbrett.jpg?raw=true)
 
 ![alt text](https://github.com/raphi2/Filamentwaage/blob/master/Fotos/Foto_1.jpg?raw=true)
