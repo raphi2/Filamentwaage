@@ -1,3 +1,3 @@
 # Filamentwaage
 
-Created by: Bader Raphael, Brockschmidt Sophia, Mooser Anna
+Created by: Bader Raphael, Brockschmidt Sophia, Moser Anna
