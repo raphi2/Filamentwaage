@@ -25,7 +25,7 @@ Created by: Bader Raphael, Brockschmidt Sophia, Moser Anna
 GPIO 16 -> GPIO 33
 
 GPIO 4  -> GPIO 32
-! [alt text](https://i0.wp.com/randomnerdtutorials.com/wp-content/uploads/2022/03/ESP32-load-cell-diagram_bb.png?resize=1024%2C472&quality=100&strip=all&ssl=1)
+![alt text](https://i0.wp.com/randomnerdtutorials.com/wp-content/uploads/2022/03/ESP32-load-cell-diagram_bb.png?resize=1024%2C472&quality=100&strip=all&ssl=1)
 
 ![alt text](https://github.com/raphi2/Filamentwaage/blob/master/Fotos/3D_Konzept.jpg?raw=true)
 
