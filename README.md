@@ -19,7 +19,7 @@ Created by: Bader Raphael, Brockschmidt Sophia, Moser Anna
 
 #### Hardware
 
-#####Pinbelegung ESP32
+##### Pinbelegung ESP32
 
 Änderungen:
 GPIO 16 -> GPIO 33
