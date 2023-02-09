@@ -68,4 +68,4 @@ ottowinter/ESPAsyncWebServer-esphome@^3.0.0![image](https://user-images.githubus
 
 5. [10.0.9.47](http://10.0.9.47/) Anzeige Filamentwaage 
 
-
+### Mögliche Verbesserungen:
