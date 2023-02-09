@@ -8,30 +8,26 @@ Created by: Bader Raphael, Brockschmidt Sophia, Moser Anna
 - Sensor: Wägezelle 5kg ([Amazon Link](https://www.amazon.de/dp/B073GWX6J4?ref=ppx_yo2ov_dt_b_product_details&th=1))
 - A/D Wandler: HX711
 - Schrauben: 2x M5x20mm / 2x M4x20mm
+- diverse Jumperkabel
+- Steckboard
+- additiv gefertigte Halterung für Wägezelle (siehe Ordner 3D)
 
 
 ### Verwendete Bibliotheken:
-- [HX711] (https://github.com/bogde/HX711)
+- HX711  
+- ESPAsyncWebServer 
+- AsyncElegantOTA
 
-
-### Vorbereitung
-[Link zu Tutorial](https://user-images.githubusercontent.com/124445731/216824439-50896850-175e-45c3-b1ba-71407113d498.png)
-
-#### Hardware
 
 ##### Pinbelegung ESP32
 
-Änderungen:
-GPIO 16 -> GPIO 33
+GPIO 33 = DT data 
 
-GPIO 4  -> GPIO 32
-![alt text](https://i0.wp.com/randomnerdtutorials.com/wp-content/uploads/2022/03/ESP32-load-cell-diagram_bb.png?resize=1024%2C472&quality=100&strip=all&ssl=1)
+GPIO 32 = SCK clock
 
-![alt text](https://github.com/raphi2/Filamentwaage/blob/master/Fotos/3D_Konzept.jpg?raw=true)
 
-![alt text](https://github.com/raphi2/Filamentwaage/blob/master/Fotos/Steckbrett.jpg?raw=true)
 
-![alt text](https://github.com/raphi2/Filamentwaage/blob/master/Fotos/Foto_1.jpg?raw=true)
+
 
 #### Software
 ##### Libraries installieren
@@ -66,6 +62,10 @@ ottowinter/ESPAsyncWebServer-esphome@^3.0.0![image](https://user-images.githubus
 
 4. Einheiten ändern
 
-5. [10.0.9.47](http://10.0.9.47/) Anzeige Filamentwaage 
+5. [10.0.9.47](http://10.0.9.47/) Anzeige Filamentwaage
+
+![alt text](https://github.com/raphi2/Filamentwaage/blob/master/Fotos/3D_Konzept.jpg?raw=true)
+
+![alt text](https://github.com/raphi2/Filamentwaage/blob/master/Fotos/Foto_1.jpg?raw=true)
 
 ### Mögliche Verbesserungen:
