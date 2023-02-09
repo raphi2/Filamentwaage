@@ -21,9 +21,8 @@ Created by: Bader Raphael, Brockschmidt Sophia, Moser Anna
 
 ##### Pinbelegung ESP32
 
-GPIO 33 = DT data 
-
-GPIO 32 = SCK clock
+- GPIO 33 = DT data 
+- GPIO 32 = SCK clock
 
 ![alt text](https://github.com/raphi2/Filamentwaage/blob/master/Fotos/Steckbrett_1.jpg?raw=true)
 
@@ -33,7 +32,7 @@ GPIO 32 = SCK clock
 
 
 ##### Kalibrierfaktor bestimmen
-Für eine aussagekräftige Gewichtsaussage muss zuerst der Kalibrierfaktor mittels Normgewicht (100g) ermittelt werden.
+Für eine aussagekräftige Gewichtsausgabe wurde zunächst der Kalibrierfaktor mittels Normgewicht (100g) bestimmt. 
 Kalibrierfaktor = angezeigter Wert 48466 / 100g 
 
 -> in Programmcode ergänzen mittels Funktion scale.set_scale
@@ -45,9 +44,9 @@ leere & volle Filamentrolle wird mittels Präzisionswaage gewogen und mit Wert d
 
 ##### Web Server Anwendung
 
--> Netzwerk Anmeldecode (SSID + Passwort) im Code ergänzen
+- Netzwerk Anmeldecode (SSID + Passwort) im Code ergänzen
 
--> Aufruf der ausgegebenen IP-Adresse
+- Aufruf der ausgegebenen IP-Adresse
 
 ![alt text](https://github.com/raphi2/Filamentwaage/blob/master/Fotos/3D_Konzept.jpg?raw=true)
 
