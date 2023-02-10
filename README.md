@@ -82,22 +82,9 @@ Grün: Halterung / Orange Auflage Spule
 - Lötstellen mehrfach ausgerissen
 - Entfernen der Stützstruktur der additiv gefertigten Halterung
 - Mangelnde Genauigkeit der gedruckten Teile machten intensive Nacharbeit notwendig
-- Gewichtszunahme am ruhenden Objekt durch größeren Moment: +0,9g nach 23min 28s 
+- Gewichtszunahme am ruhenden Objekt durch Wärmeausdehnung: +0,9g nach 23min 28s
 
 ![alt text](https://github.com/raphi2/Filamentwaage/blob/master/Fotos/Gewichtszunahme_neu.JPG?raw=true)
-
-
-### Fazit
-
-Theoretisch ist die Filamentwaage in der Lage auf 0,01g genau zu gemessen. In der Praxis sind Schwankungen von mind. 0,2g zu beobachten. Für die oben beschriebene Anwendung ist dies jedoch vernachlässigbar. 
-
-Um eine aussagekräftige Gewichtsmessung zu erhalten, muss die Wägezelle vor Inbetriebnahme auf Raumtemperatur gebracht werden. 
-
-Im folgenden Graph sind zwei Linien zu erkennen:
-
-Die grüne Linie visualisiert eine Messung, die gelbe Linie den Mittelwert aus 10 Messungen darstellt. Durch die Berechnung des Mittelwertes können große Messabweichungen eleminiert und die Messkurve geglättet werden.
-
-![alt text](https://github.com/raphi2/Filamentwaage/blob/master/Fotos/Mittelwert_neu.JPG?raw=true)
 
 Bei einem Probedruck eines ca. 1,5g schweren Deckels ist eine eine Zunahme des angezeigten Gewichtswerts sichtbar, wobei nach Ende des Drucks die Gewichtszunahme bei a. 4g war. Der Druck wurde um 18:08 gestartet und endete um 18:28.
 ![alt text](https://github.com/raphi2/Filamentwaage/blob/master/Fotos/Druckversuch.JPG?raw=true)
@@ -108,9 +95,23 @@ Mögliche Ursachen für die Zunahme sind möglich:
 - Die Filamentspule ist unwucht, wodurch die großen Sprünge bei der Messung entstehen
 - Zu geringe Gewichtsabnahme des Filaments, daher 
 
-Um einen Algorithmus erstellen zu können, der die Messabweichungen während des Drucks kompensiert, muss eine Langzeitmessung während eines Druck gemacht werden.
+### Fazit
 
-#### Verbesserungen
+Theoretisch ist die Filamentwaage in der Lage auf 0,01g genau zu gemessen. In der Praxis sind Schwankungen bei ruhiggelagerten Objekten von mind. 0,2g zu beobachten. Für die oben beschriebene Anwendung ist dies jedoch vernachlässigbar.
+
+Im folgenden Graph sind zwei Linien zu erkennen: 
+Die grüne Linie visualisiert eine Messung, die gelbe Linie den Mittelwert aus 10 Messungen darstellt. Durch die Berechnung des Mittelwertes können große Messabweichungen eleminiert und die Messkurve geglättet werden.
+
+![alt text](https://github.com/raphi2/Filamentwaage/blob/master/Fotos/Mittelwert_neu.JPG?raw=true)
+
+Um eine aussagekräftige Gewichtsmessung zu erhalten, muss die Wägezelle vor Inbetriebnahme auf Raumtemperatur gebracht werden. 
+
+Für ein aussagekräftiges Ergebnis des Projekts muss noch eine Langzeit während eines Drucks gemacht werden.
+
+Aufbau der Filamentwaage am Ender 3 Pro.
+![Aufbau am Ender 3 Pro](https://github.com/raphi2/Filamentwaage/blob/master/Fotos/Foto_1.jpg?raw=true)
+
+#### Mögliche Verbesserungen
 
 - andere Zuführung des Filaments, ggf Umlenkung
 - widerstandsarme Lagerung der Filamentspult, durch bspw. Kugellager
@@ -118,5 +119,4 @@ Um einen Algorithmus erstellen zu können, der die Messabweichungen während des
 - Algorithmus implementieren, der die Messabweichungen während des Drucks kompensiert
 - Algorithmus implementieren, der den nächsten Wechsel der Filamentspule vorrausagt
 
-Aufbau der Filamentwaage am Ender 3 Pro.
-![Aufbau am Ender 3 Pro](https://github.com/raphi2/Filamentwaage/blob/master/Fotos/Foto_1.jpg?raw=true)
+
