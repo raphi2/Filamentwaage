@@ -90,13 +90,13 @@ const char index_html[] PROGMEM = R"rawliteral(
     <span id="gewicht">%GEWICHT%</span>
     <span class="gewicht-labels">g</span>
   </p>
-  <button onclick="reverseDirection()">TARA</button>
+  <button onclick="TaraScale()">TARA</button>
 
 
 </body>
 <script>
 
-function reverseDirection(){
+function TaraScale(){
   var xhr = new XMLHttpRequest();
   xhr.open("GET", "/button?value=", true);
   xhr.send();
