@@ -6,6 +6,8 @@ Created by: Bader Raphael, Brockschmidt Sophia, Moser Anna
 
 Winterchallenge Angabe
 
+### Challanges
+
 ### Verwendete Hardware: 
 
 - Microcontoller: ESP32 Vroom
@@ -51,6 +53,8 @@ leere & volle Filamentrolle wird mittels Präzisionswaage gewogen und mit Wert d
 - Netzwerk Anmeldecode (SSID + Passwort) im Code ergänzen
 
 - Aufruf der ausgegebenen IP-Adresse
+
+### Resume
 
 ![alt text](https://github.com/raphi2/Filamentwaage/blob/master/Fotos/3D_Konzept.jpg?raw=true)
 
