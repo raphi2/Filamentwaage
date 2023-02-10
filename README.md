@@ -20,6 +20,11 @@ Ziele:
 - Entfernen der Stützstruktur der additiv gefertigten Halterung
 - Mangelnde Genauigkeit der gedruckten Teile machten intensive Nacharbeit notwendig
 - Gewichtszunahme am ruhenden Objekt durch größeren Moment: +0,9g nach 23min 28s 
+
+y-Achse = Gewicht in g
+
+x-Achse = Zeitverlauf hh:minmin:ss
+
 ![alt text](https://github.com/raphi2/Filamentwaage/blob/master/Fotos/Gewichtszunahme.JPG?raw=true)
 
 
@@ -68,16 +73,35 @@ leere & volle Filamentrolle wird mittels Präzisionswaage gewogen und mit Wert d
 
 - Netzwerk Anmeldecode (SSID + Passwort) im Code ergänzen
 
-- Aufruf der ausgegebenen IP-Adresse
+- mittels Aufruf der ausgegebenen IP-Adresse/update kann die Firmware des Microcontrollers OTA aktualisiert werden
 
-### Fazit
 
-Theoretisch ist die Filamentwaage in der Lage auf 0,01g genau zu gemessen. In der Praxis sind Schwankungen von mind. 0,2g zu beobachten. Für die oben beschriebene Anwendung ist dies jedoch vernachlässigbar. 
+
 
 ![alt text](https://github.com/raphi2/Filamentwaage/blob/master/Fotos/3D_Konzept.jpg?raw=true)
 
 ![Aufbau am Ender 3 Pro](https://github.com/raphi2/Filamentwaage/blob/master/Fotos/Foto_1.jpg?raw=true)
 
+Folgende Website visualisiert das Filamentgewicht auf 0,01g genau und aktualisiert sich alle 5 Sekunden. 
+Mittels Tara Button kann der aktuelle Gewichtswert tariert werden. Dies ist nur notwendig, wenn eine neue Filamentspule mit einer neuen Rolle verwendet wird.
+
 ![alt text](https://github.com/raphi2/Filamentwaage/blob/master/Fotos/Website.JPG?raw=true)
+
+
+
+### Fazit
+
+Theoretisch ist die Filamentwaage in der Lage auf 0,01g genau zu gemessen. In der Praxis sind Schwankungen von mind. 0,2g zu beobachten. Für die oben beschriebene Anwendung ist dies jedoch vernachlässigbar. 
+
+Um eine aussagekräftige Gewichtsmessung zu erhalten, muss die Wägezelle vor Inbetriebnahme auf Raumtemperatur gebracht werden. 
+
+Im folgenden Graph sind zwei Linien zu erkennen:
+
+Die grüne Linie visualisiert eine Messung, während die gelbe Linie den Mittelwert aus 10 Messungen ergibt. 
+
+![alt text](https://github.com/raphi2/Filamentwaage/blob/master/Fotos/Mittelwert.JPG?raw=true)
+
+
+
 
 
