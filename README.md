@@ -113,14 +113,13 @@ Probedruck eines ca. 1,5g schweren Deckels. Dabei entstand eine Zunahme des ange
 - entstandene Zugkraft an der Filamentspule (mögliche Lösung: andere Zuführung des Filaments, ggf Umlenkung)
 - zu geringe Gerichtabnahme des Filaments -> zur Klärung schwereres Druckobjekt zur Überprüfung der These
 
+![alt text](https://github.com/raphi2/Filamentwaage/blob/master/Fotos/Druckversuch.JPG?raw=true)
+
 
 #### Verbesserungen
 
 - andere Zuführung des Filaments, ggf Umlenkung
 - widerstandsarme Lagerung der Filamentspult, durch bspw. Kugellager
-
-
-
 
 
 
