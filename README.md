@@ -27,7 +27,7 @@ Ziele:
 - Schrauben: 2x M5x20mm / 2x M4x20mm
 - diverse Jumperkabel
 - Steckboard
-- additiv gefertigte Halterung für Wägezelle ([siehe Ordner 3D](3D))
+- additiv gefertigte Halterung für Wägezelle
 
 ### Verwendete Bibliotheken:
 - HX711  
@@ -62,14 +62,19 @@ Folgende Website visualisiert das Filamentgewicht auf 0,01g genau und aktualisie
 
 Mittels Tara Button kann der aktuelle Gewichtswert tariert werden. Dies ist nur notwendig, wenn eine neue Filamentspule mit einer neuen Rolle verwendet wird.
 
-Deweiteren kann die Firmware des Microcontoller über Over-the-Air-Update aktualisiert werden [Link](10.0.8.146/update)
+Desweiteren kann die Firmware des Microcontoller über Over-the-Air-Update aktualisiert werden [Link](10.0.8.146/update)
 
 ![alt text](https://github.com/raphi2/Filamentwaage/blob/master/Fotos/Website.JPG?raw=true)
 
+#### Halterung der Waage
+
+Die Halterung der Waage wurde durch 3D Druck hergestellt und anschließend mit M5 und M4 Schrauben an der Wägezelle montiert.
+
+([Link zu 3D Daten](3D))
+
+Screenshot des 3D Modells:
+
 ![alt text](https://github.com/raphi2/Filamentwaage/blob/master/Fotos/3D_Konzept.jpg?raw=true)
-
-![Aufbau am Ender 3 Pro](https://github.com/raphi2/Filamentwaage/blob/master/Fotos/Foto_1.jpg?raw=true)
-
 
 ### Challenges
 
@@ -108,3 +113,5 @@ Mögliche Ursachen:
   - zur Klärung muss ein schwereres Druckobjekt zur Überprüfung der These
 
 ![alt text](https://github.com/raphi2/Filamentwaage/blob/master/Fotos/Druckversuch.JPG?raw=true)
+
+![Aufbau am Ender 3 Pro](https://github.com/raphi2/Filamentwaage/blob/master/Fotos/Foto_1.jpg?raw=true)
