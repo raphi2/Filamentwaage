@@ -54,7 +54,7 @@ Kalibrierfaktor = angezeigter Wert 48466 / 100g
 
 ```scale.set_scale(48466/100);```
 
-Um die Richtigkeit des Kalibrierungsfaktor zu überprüfen wurde anschließend das Normgewicht mit einer Präzisionswaage verglichen
+Um die Richtigkeit des Kalibrierungsfaktor zu überprüfen wurde anschließend das Normgewicht mit einer Präzisionswaage und der Wägezelle gemessen und der Wert miteinander verglichen. Der Unterschied zwischen den beiden Messungen war 0,05g.
 
 ##### Web Server Anwendung
 
