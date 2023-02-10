@@ -116,5 +116,6 @@ Aufbau der Filamentwaage am Ender 3 Pro.
 - Integration eines Grafen auf der Webseite, zur Darstellung des Gewichts über eine bestimmte Zeitperiode
 - Algorithmus implementieren, der die Messabweichungen während des Drucks kompensiert
 - Algorithmus implementieren, der den nächsten Wechsel der Filamentspule vorrausagt
+- Anpassung des Messintervalls am Spulenverbrauch
 
 
