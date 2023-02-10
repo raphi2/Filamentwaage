@@ -1,6 +1,10 @@
 /**
- *
+Filamentwaage für 3D Drucker
+Idee und Umsetzung: Bader Raphael, Brockschmidt Sophia, Moser Anna
+Wurde im Zuge der SPS Winterchallenge 2022/23 an der FH Kufstein erarbeitet
 **/
+
+//import of libraries
 #include <Arduino.h>
 #include <HX711.h>
 #include <WiFi.h>
@@ -8,7 +12,7 @@
 #include <AsyncElegantOTA.h>
 #include <AsyncTCP.h>
 
-//InfluxDB
+//InfluxDB library and definitions
 #define DEVICE "ESP32"
 #include <WiFiMulti.h>
 WiFiMulti wifiMulti;
@@ -28,7 +32,7 @@ const char* password = "P##96bCqXYuuF*e";
 #define INFLUXDB_DB_NAME "dbSPS22"
 InfluxDBClient client(INFLUXDB_URL, INFLUXDB_DB_NAME);
 
-// Data point
+// Data point in InfluxDB
 Point sensor("Wägezelle Ender 3 Pro");
 
 // Set InfluxDB 1 authentication parameter
@@ -38,10 +42,10 @@ Point sensor("Wägezelle Ender 3 Pro");
 // Create AsyncWebServer object on port 80
 AsyncWebServer server(80);
 
+//Definition of scale variable
 HX711 scale;
 
-float gewicht_leeresfilament = 189.9;
-
+// Code for HTML Webseite
 const char index_html[] PROGMEM = R"rawliteral(
 <!DOCTYPE HTML><html>
 <head>
@@ -116,7 +120,7 @@ setInterval(function ( ) {
 String processor(const String& var){
   //Serial.println(var);
   if(var == "GEWICHT"){
-    return "TARA";
+    return "Bitte warten";
   }
   return String();
 }
@@ -125,9 +129,8 @@ void setup() {
 
   Serial.begin(115200);
 
-// InfluxDB connection
-
-  // Connect WiFi - Influx DN
+  // InfluxDB connection
+  // Connect WiFi - Influx DB
   Serial.println("Connecting to WiFi");
   WiFi.mode(WIFI_STA);
   wifiMulti.addAP(ssid, password);
@@ -242,6 +245,8 @@ void setup() {
 }
 
 void loop() {
+
+  // Sensor data Output to console
   Serial.print("one reading:\t");
   Serial.print(scale.get_units(), 1);
   Serial.print("\t| average:\t");
@@ -249,7 +254,8 @@ void loop() {
 
   // Store measured value into point
   sensor.clearFields();
-  sensor.addField("Gewicht", scale.get_units());
+  sensor.addField("Gewicht", scale.get_units()); //store measurement of 1 reading into Database
+  sensor.addField("Mittelwelt", scale.get_units(10)); //store the average of 10 readings into Database
 
   // Print what are we exactly writing
   Serial.print("Writing: ");
