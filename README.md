@@ -35,7 +35,7 @@ Ziele:
 - AsyncElegantOTA
 - ESP8266 Influxdb
 
-##### Pinbelegung ESP32
+### Pinbelegung ESP32
 
 - GPIO 33 = DT data 
 - GPIO 32 = SCK clock
@@ -46,7 +46,7 @@ Ziele:
 
 ![alt text](https://github.com/raphi2/Filamentwaage/blob/master/Fotos/ESP32.jpg?raw=true)
 
-##### Kalibrierfaktor bestimmen
+### Kalibrierfaktor bestimmen
 Für eine aussagekräftige Gewichtsausgabe wurde zunächst der Kalibrierfaktor der Wägezelle mittels Normgewicht (100g) bestimmt. 
 Kalibrierfaktor = angezeigter Wert 48466 / 100g 
 
@@ -56,7 +56,7 @@ Kalibrierfaktor = angezeigter Wert 48466 / 100g
 
 Um die Richtigkeit des Kalibrierungsfaktor zu überprüfen wurde anschließend das Normgewicht mit einer Präzisionswaage und der Wägezelle gemessen und der Wert miteinander verglichen. Der Unterschied zwischen den beiden Messungen war 0,05g.
 
-##### Web Server Anwendung
+### Web Server Anwendung
 
 Folgende Website visualisiert das Filamentgewicht auf 0,01g genau und aktualisiert die Messung alle 5 Sekunden. 
 
@@ -66,13 +66,13 @@ Desweiteren kann die Firmware des Microcontoller über Over-the-Air-Update aktua
 
 ![alt text](https://github.com/raphi2/Filamentwaage/blob/master/Fotos/Website.JPG?raw=true)
 
-#### Halterung der Waage
+### Halterung der Waage
 
 Die Halterung der Waage wurde durch 3D Druck hergestellt und anschließend mit M5 und M4 Schrauben an der Wägezelle montiert.
 
 ([Link zu 3D Daten](3D))
 
-Screenshot des 3D Modells:
+Grün: Halterung / Orange Auflage Spule
 
 ![alt text](https://github.com/raphi2/Filamentwaage/blob/master/Fotos/3D_Konzept.jpg?raw=true)
 
@@ -87,11 +87,6 @@ Screenshot des 3D Modells:
 ![alt text](https://github.com/raphi2/Filamentwaage/blob/master/Fotos/Gewichtszunahme_neu.JPG?raw=true)
 
 
-#### Verbesserungen
-
-- andere Zuführung des Filaments, ggf Umlenkung
-- widerstandsarme Lagerung der Filamentspult, durch bspw. Kugellager
-
 ### Fazit
 
 Theoretisch ist die Filamentwaage in der Lage auf 0,01g genau zu gemessen. In der Praxis sind Schwankungen von mind. 0,2g zu beobachten. Für die oben beschriebene Anwendung ist dies jedoch vernachlässigbar. 
@@ -100,18 +95,28 @@ Um eine aussagekräftige Gewichtsmessung zu erhalten, muss die Wägezelle vor In
 
 Im folgenden Graph sind zwei Linien zu erkennen:
 
-Die grüne Linie visualisiert eine Messung, während die gelbe Linie den Mittelwert aus 10 Messungen ergibt. 
+Die grüne Linie visualisiert eine Messung, die gelbe Linie den Mittelwert aus 10 Messungen darstellt. Durch die Berechnung des Mittelwertes können große Messabweichungen eleminiert und die Messkurve geglättet werden.
 
 ![alt text](https://github.com/raphi2/Filamentwaage/blob/master/Fotos/Mittelwert_neu.JPG?raw=true)
 
-Probedruck eines ca. 1,5g schweren Deckels. Dabei entstand eine Zunahme des angezeigten Gewichtswerts um ca. 4g. 
-
-Mögliche Ursachen:
-- entstandene Zugkraft an der Filamentspule 
-  - mögliche Lösung: andere Zuführung des Filaments, ggf Umlenkung
-- zu geringe Gewichtsabnahme des Filaments 
-  - zur Klärung muss ein schwereres Druckobjekt zur Überprüfung der These
-
+Bei einem Probedruck eines ca. 1,5g schweren Deckels ist eine eine Zunahme des angezeigten Gewichtswerts sichtbar, wobei nach Ende des Drucks die Gewichtszunahme bei a. 4g war. Der Druck wurde um 18:08 gestartet und endete um 18:28.
 ![alt text](https://github.com/raphi2/Filamentwaage/blob/master/Fotos/Druckversuch.JPG?raw=true)
 
+Mögliche Ursachen für die Zunahme sind möglich:
+- Aufgrund des Filamentvorschubs am 3D Drucker entstehen Zugkraft an der Filamentspule 
+  - mögliche Lösung: andere Zuführung des Filaments, ggf Umlenkung
+- Die Filamentspule ist unwucht, wodurch die großen Sprünge bei der Messung entstehen
+- Zu geringe Gewichtsabnahme des Filaments, daher 
+
+Um einen Algorithmus erstellen zu können, der die Messabweichungen während des Drucks kompensiert, muss eine Langzeitmessung während eines Druck gemacht werden.
+
+#### Verbesserungen
+
+- andere Zuführung des Filaments, ggf Umlenkung
+- widerstandsarme Lagerung der Filamentspult, durch bspw. Kugellager
+- Integration eines Grafen auf der Webseite, zur Darstellung des Gewichts über eine bestimmte Zeitperiode
+- Algorithmus implementieren, der die Messabweichungen während des Drucks kompensiert
+- Algorithmus implementieren, der den nächsten Wechsel der Filamentspule vorrausagt
+
+Aufbau der Filamentwaage am Ender 3 Pro.
 ![Aufbau am Ender 3 Pro](https://github.com/raphi2/Filamentwaage/blob/master/Fotos/Foto_1.jpg?raw=true)
