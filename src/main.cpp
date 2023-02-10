@@ -1,20 +1,18 @@
-/*
- * Complete project details at https://RandomNerdTutorials.com/esp32-load-cell-hx711/
- *
- * HX711 library for Arduino - example file
- * https://github.com/bogde/HX711
- *
- * MIT License
- * (c) 2018 Bogdan Necula
+/**
  *
 **/
 #include <Arduino.h>
-#include "HX711.h"
-#include "soc/rtc.h"
-#include "WiFi.h"
-#include "ESPAsyncWebServer.h"
+#include <HX711.h>
+#include <WiFi.h>
+#include <ESPAsyncWebServer.h>
 #include <AsyncElegantOTA.h>
 #include <AsyncTCP.h>
+
+//InfluxDB
+#define DEVICE "ESP32"
+#include <WiFiMulti.h>
+WiFiMulti wifiMulti;
+#include <InfluxDbClient.h>
 
 // HX711 circuit wiring
 const int LOADCELL_DOUT_PIN = 33;
@@ -23,6 +21,19 @@ const int LOADCELL_SCK_PIN = 32;
 // Replace with your network credentials
 const char* ssid = "FH_MEDIEN";
 const char* password = "P##96bCqXYuuF*e";
+
+// InfluxDB URL
+#define INFLUXDB_URL "http://217.160.37.170:8086"
+// InfluxDB Name
+#define INFLUXDB_DB_NAME "dbSPS22"
+InfluxDBClient client(INFLUXDB_URL, INFLUXDB_DB_NAME);
+
+// Data point
+Point sensor("Wägezelle Ender 3 Pro");
+
+// Set InfluxDB 1 authentication parameter
+#define INFLUXDB_USER "SPS22"
+#define INFLUXDB_PASSWORD "@home2learn"
 
 // Create AsyncWebServer object on port 80
 AsyncWebServer server(80);
@@ -46,46 +57,101 @@ const char index_html[] PROGMEM = R"rawliteral(
     h2 { font-size: 3.0rem; }
     p { font-size: 3.0rem; }
     .units { font-size: 1.2rem; }
-    .dht-labels{
+    .gewicht-labels{
       font-size: 1.5rem;
       vertical-align:middle;
       padding-bottom: 15px;
     }
+    button {
+      background-color: #034078;
+      border: none;
+      padding: 14px 20px;
+      text-align: center;
+      font-size: 20px;
+      border-radius: 4px;
+      transition-duration: 0.4s;
+      color: white;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #1282A2;
+    }
   </style>
 </head>
+
 <body>
   <h2>Filamentwaage</h2>
   <p>
-    <i class="fas fa-thermometer-half" style="color:#059e8a;"></i>
-    <span class="dht-labels">Gewicht</span>
-    <span id="temperature">%TEMPERATURE%</span>
-    <sup class="units">g</sup>
+    <span class="gewicht-labels">Gewicht</span>
+    <span id="gewicht">%GEWICHT%</span>
+    <span class="gewicht-labels">g</span>
   </p>
+  <button onclick="reverseDirection()">TARA</button>
+
+
 </body>
 <script>
+
+function reverseDirection(){
+  var xhr = new XMLHttpRequest();
+  xhr.open("GET", "/button?value=", true);
+  xhr.send();
+}
+
 setInterval(function ( ) {
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-      document.getElementById("temperature").innerHTML = this.responseText;
+      document.getElementById("gewicht").innerHTML = this.responseText;
     }
   };
-  xhttp.open("GET", "/temperature", true);
+  xhttp.open("GET", "/gewicht", true);
   xhttp.send();
 }, 10000 ) ;
+
 </script>
 </html>)rawliteral";
 
-// Replaces placeholder with DHT values
+// Replaces placeholder with weight values
 String processor(const String& var){
   //Serial.println(var);
-  if(var == "TEMPERATURE"){
-    return "initialisierung";
+  if(var == "GEWICHT"){
+    return "TARA";
   }
   return String();
 }
 
 void setup() {
+
+  Serial.begin(115200);
+
+// InfluxDB connection
+
+  // Connect WiFi - Influx DN
+  Serial.println("Connecting to WiFi");
+  WiFi.mode(WIFI_STA);
+  wifiMulti.addAP(ssid, password);
+  while (wifiMulti.run() != WL_CONNECTED) {
+    Serial.print(".");
+    delay(500);
+  }
+  Serial.println();
+
+  // Set InfluxDB 1 authentication params
+  client.setConnectionParamsV1(INFLUXDB_URL, INFLUXDB_DB_NAME, INFLUXDB_USER, INFLUXDB_PASSWORD);
+
+  // Add constant tags - only once
+  sensor.addTag("device", DEVICE);
+  sensor.addTag("SSID", WiFi.SSID());
+
+  // Check server connection
+  if (client.validateConnection()) {
+    Serial.print("Connected to InfluxDB: ");
+    Serial.println(client.getServerUrl());
+  } else {
+    Serial.print("InfluxDB connection failed: ");
+    Serial.println(client.getLastErrorMessage());
+  }
 
   // Connect to Wi-Fi
   WiFi.begin(ssid, password);
@@ -101,9 +167,14 @@ void setup() {
   server.on("/", HTTP_GET, [](AsyncWebServerRequest *request){
     request->send_P(200, "text/html", index_html, processor);
   });
-  server.on("/temperature", HTTP_GET, [](AsyncWebServerRequest *request){
+  server.on("/gewicht", HTTP_GET, [](AsyncWebServerRequest *request){
     request->send_P(200, "text/plain", String(scale.get_units()).c_str());
   });
+
+  // Send a GET request to Tare Button - Scale Tare
+  server.on("/button", HTTP_GET, [](AsyncWebServerRequest *request){
+    scale.tare();               // reset the scale to 0
+    });
 
   // Start server
   server.begin();
@@ -131,10 +202,6 @@ void setup() {
   server.begin();
   Serial.println("HTTP server started");
 
-  Serial.begin(115200);
-  //rtc_clk_cpu_freq_set(RTC_CPU_FREQ_80M);
-  Serial.println("HX711 Demo");
-
   Serial.println("Initializing the scale");
 
   scale.begin(LOADCELL_DOUT_PIN, LOADCELL_SCK_PIN);
@@ -153,8 +220,7 @@ void setup() {
   Serial.println(scale.get_units(5), 1);  // print the average of 5 readings from the ADC minus tare weight (not set) divided
             // by the SCALE parameter (not set yet)
            
-  scale.set_scale(48466/100);
-  //scale.set_scale(-471.497);                      // this value is obtained by calibrating the scale with known weights; see the README for details
+  scale.set_scale(48466/100); // this value is obtained by calibrating the scale with known weights; see the README for details                  
   scale.tare();               // reset the scale to 0
 
   Serial.println("After setting up the scale:");
@@ -181,6 +247,24 @@ void loop() {
   Serial.print("\t| average:\t");
   Serial.println(scale.get_units(10), 5);
 
+  // Store measured value into point
+  sensor.clearFields();
+  sensor.addField("Gewicht", scale.get_units());
+
+  // Print what are we exactly writing
+  Serial.print("Writing: ");
+  Serial.println(client.pointToLineProtocol(sensor));
+
+  // If no Wifi signal, try to reconnect it
+  if (wifiMulti.run() != WL_CONNECTED) {
+    Serial.println("Wifi connection lost");
+  }
+  // Write point
+  if (!client.writePoint(sensor)) {
+    Serial.print("InfluxDB write failed: ");
+    Serial.println(client.getLastErrorMessage());
+  }
+  
   delay(5000);
 }
 
