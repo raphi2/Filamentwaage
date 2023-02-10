@@ -32,7 +32,7 @@ y-Achse = Gewicht in g
 
 x-Achse = Zeitverlauf hh:minmin:ss
 
-![alt text](https://github.com/raphi2/Filamentwaage/blob/master/Fotos/Gewichtszunahme.JPG?raw=true)
+![alt text](https://github.com/raphi2/Filamentwaage/blob/master/Fotos/Gewichtszunahme_neu.JPG?raw=true)
 
 
 
