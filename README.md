@@ -105,6 +105,18 @@ Die grüne Linie visualisiert eine Messung, während die gelbe Linie den Mittelw
 ![alt text](https://github.com/raphi2/Filamentwaage/blob/master/Fotos/Mittelwert.JPG?raw=true)
 
 
+Probedruck eines ca. 1,5g schweren Deckels. Dabei entstand eine Zunahme des angezeigten Gewichtswerts um ca. 4g. Mögliche Ursachen:
+- entstandene Zugkraft an der Filamentspule (mögliche Lösung: andere Zuführung des Filaments, ggf Umlenkung)
+- zu geringe Gerichtabnahme des Filaments -> zur Klärung schwereres Druckobjekt zur Überprüfung der These
+
+
+#### Verbesserungen
+
+- andere Zuführung des Filaments, ggf Umlenkung
+- widerstandsarme Lagerung der Filamentspult, durch bspw. Kugellager
+
+
+
 
 
 
