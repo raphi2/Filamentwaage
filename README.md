@@ -1,13 +1,12 @@
 # Filamentwaage
 
+Konzept und Umsetzung von: Bader Raphael, Brockschmidt Sophia, Moser Anna
+
+### Übersicht
+
 [Link zum Grafana Dashboard](http://217.160.37.170:3000/d/aa0QPgJ4z/wagezelle-ender-3-pro?from=1676030184659&to=1676051784659&viewPanel=2&orgId=1&theme=dark)
 
-Webseite aufrufbar unter: [10.0.8.146](10.0.8.146)
-
-
-
-
-Created by: Bader Raphael, Brockschmidt Sophia, Moser Anna
+Lokale Webseite aufrufbar unter: [10.0.8.146](10.0.8.146)
 
 ### Zielstellung
 
