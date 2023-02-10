@@ -2,6 +2,10 @@
 
 Created by: Bader Raphael, Brockschmidt Sophia, Moser Anna
 
+### Zielstellung
+
+Winterchallenge Angabe
+
 ### Verwendete Hardware: 
 
 - Microcontoller: ESP32 Vroom
@@ -12,11 +16,11 @@ Created by: Bader Raphael, Brockschmidt Sophia, Moser Anna
 - Steckboard
 - additiv gefertigte Halterung für Wägezelle (siehe Ordner 3D)
 
-
 ### Verwendete Bibliotheken:
 - HX711  
 - ESPAsyncWebServer 
 - AsyncElegantOTA
+- ESP8266 Influxdb
 
 
 ##### Pinbelegung ESP32
