@@ -72,7 +72,6 @@ Die Halterung der Waage wurde durch 3D Druck hergestellt und anschließend mit M
 ([Link zu 3D Daten](3D))
 
 Grün: Halterung / Orange Auflage Spule
-
 ![alt text](https://github.com/raphi2/Filamentwaage/blob/master/Fotos/3D_Konzept.jpg?raw=true)
 
 ### Challenges
