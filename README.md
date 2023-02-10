@@ -17,7 +17,7 @@ Ziele:
 
 - Beispielcode des HX711 Wandlers enthält Befehle, welche diesen einerseits regelmäßig in Sleep Mode versetzt, die CPU verlangsamt und das Programm bei Einbindung des Webservers zum Absturz bringt
 - Lötstellen mehrfach ausgerissen
-- Entfernen der Stützkonstruktion
+- Entfernen der Stützstruktur der additiv gefertigten Halterung
 - Mangelnde Genauigkeit der gedruckten Teile machten intensive Nacharbeit notwendig
 - Gewichtsschwankungen am ruhenden Objekt
 
