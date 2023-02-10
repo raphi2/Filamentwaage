@@ -84,7 +84,7 @@ Grün: Halterung / Orange: Auflage Spule
 
 ![alt text](https://github.com/raphi2/Filamentwaage/blob/master/Fotos/Gewichtszunahme_neu.JPG?raw=true)
 
-Bei einem Probedruck eines ca. 1,5g schweren Deckels ist eine eine Zunahme des angezeigten Gewichtswerts sichtbar, wobei nach Ende des Drucks die Gewichtszunahme bei a. 4g war. Der Druck wurde um 18:08 gestartet und endete um 18:28.
+Beim Probedruck eines ca. 1,5g schweren Deckels ist eine eine Zunahme des angezeigten Gewichtswerts sichtbar, wobei nach Ende des Drucks die Gewichtszunahme bei a. 4g war. Der Druck wurde um 18:08 gestartet und endete um 18:28.
 ![alt text](https://github.com/raphi2/Filamentwaage/blob/master/Fotos/Druckversuch.JPG?raw=true)
 
 Mögliche Ursachen für die Zunahme sind möglich:
