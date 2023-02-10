@@ -60,4 +60,6 @@ leere & volle Filamentrolle wird mittels Präzisionswaage gewogen und mit Wert d
 
 ![Aufbau am Ender 3 Pro](https://github.com/raphi2/Filamentwaage/blob/master/Fotos/Foto_1.jpg?raw=true)
 
+![Aufbau am Ender 3 Pro](https://github.com/raphi2/Filamentwaage/blob/master/Fotos/Website.jpg?raw=true)
+
 
