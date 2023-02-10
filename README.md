@@ -4,10 +4,20 @@ Created by: Bader Raphael, Brockschmidt Sophia, Moser Anna
 
 ### Zielstellung
 
-Winterchallenge Angabe
+Winterchallenge Studiengang Smart Products and Solutions 2022:
+Aufgabenstellung: Einbindung der 3D-Filament Drucker im Makers Lab der FH in eine digital factory
+
+Ziele: 
+- Vernetzung und Möglichkeit des Remote Betriebs
+- Predictive Maintenance durch geeignete Geräteüberwachung, in diesem Fall des Rohstoffs
+- Überwachung des verbleibenden Filaments
 
 ### Challanges
 
+- Beispielcode des HX711 Wandlers enthält Befehle, welche diesen einerseits regelmäßig in Sleep Mode versetzt, die CPU verlangsamt und das Programm bei Einbindung des Webservers zum Absturz bringt
+- Lötstellen mehrfach ausgerissen
+- Entfernen der Stützkonstruktion
+- Mangelnde Genauigkeit der gedruckten Teile machten intensive Nacharbeit notwendig
 ### Verwendete Hardware: 
 
 - Microcontoller: ESP32 Vroom
