@@ -19,7 +19,8 @@ Ziele:
 - Lötstellen mehrfach ausgerissen
 - Entfernen der Stützstruktur der additiv gefertigten Halterung
 - Mangelnde Genauigkeit der gedruckten Teile machten intensive Nacharbeit notwendig
-- Gewichtsschwankungen am ruhenden Objekt
+- Gewichtszunahme am ruhenden Objekt durch größeren Moment: +0,9g nach 23min 28s 
+![alt text](https://github.com/raphi2/Filamentwaage/blob/master/Fotos/Gewichtszunahme.JPG?raw=true)
 
 
 
@@ -69,7 +70,9 @@ leere & volle Filamentrolle wird mittels Präzisionswaage gewogen und mit Wert d
 
 - Aufruf der ausgegebenen IP-Adresse
 
-### Resume
+### Fazit
+
+Theoretisch ist die Filamentwaage in der Lage auf 0,01g genau zu gemessen. In der Praxis sind Schwankungen von mind. 0,2g zu beobachten. Für die oben beschriebene Anwendung ist dies jedoch vernachlässigbar. 
 
 ![alt text](https://github.com/raphi2/Filamentwaage/blob/master/Fotos/3D_Konzept.jpg?raw=true)
 
