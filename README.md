@@ -1,12 +1,12 @@
 # Filamentwaage
 
-Konzept und Umsetzung von: Bader Raphael, Brockschmidt Sophia, Moser Anna
+Konzept und Umsetzung: Bader Raphael, Brockschmidt Sophia, Moser Anna
 
-### Übersicht
+### Kurzübersicht
 
 [Link zum Grafana Dashboard](http://217.160.37.170:3000/d/aa0QPgJ4z/wagezelle-ender-3-pro?from=1676030184659&to=1676051784659&viewPanel=2&orgId=1&theme=dark)
 
-Lokale Webseite aufrufbar unter: [10.0.8.146](10.0.8.146)
+Lokale Webseite der Waage aufrufbar unter: [10.0.8.146](10.0.8.146)
 
 ### Zielstellung
 
@@ -47,28 +47,29 @@ Ziele:
 ![alt text](https://github.com/raphi2/Filamentwaage/blob/master/Fotos/ESP32.jpg?raw=true)
 
 ##### Kalibrierfaktor bestimmen
-Für eine aussagekräftige Gewichtsausgabe wurde zunächst der Kalibrierfaktor mittels Normgewicht (100g) bestimmt. 
+Für eine aussagekräftige Gewichtsausgabe wurde zunächst der Kalibrierfaktor der Wägezelle mittels Normgewicht (100g) bestimmt. 
 Kalibrierfaktor = angezeigter Wert 48466 / 100g 
 
--> in Programmcode ergänzen mittels Funktion scale.set_scale
+-> der Kalibrierfaktor wurde im Programmcode ergänzt:
 
-###### Überprüfung Kalibrierfaktor
-leere & volle Filamentrolle wird mittels Präzisionswaage gewogen und mit Wert der Filamentwaage verglichen
+```scale.set_scale(48466/100);```
+
+Um die Richtigkeit des Kalibrierungsfaktor zu überprüfen wurde anschließend das Normgewicht mit einer Präzisionswaage verglichen
 
 ##### Web Server Anwendung
 
-- Netzwerk Anmeldecode (SSID + Passwort) im Code ergänzen
+Folgende Website visualisiert das Filamentgewicht auf 0,01g genau und aktualisiert die Messung alle 5 Sekunden. 
 
-- mittels Aufruf der ausgegebenen IP-Adresse/update kann die Firmware des Microcontrollers OTA aktualisiert werden
+Mittels Tara Button kann der aktuelle Gewichtswert tariert werden. Dies ist nur notwendig, wenn eine neue Filamentspule mit einer neuen Rolle verwendet wird.
+
+Deweiteren kann die Firmware des Microcontoller über Over-the-Air-Update aktualisiert werden [Link](10.0.8.146/update)
+
+![alt text](https://github.com/raphi2/Filamentwaage/blob/master/Fotos/Website.JPG?raw=true)
 
 ![alt text](https://github.com/raphi2/Filamentwaage/blob/master/Fotos/3D_Konzept.jpg?raw=true)
 
 ![Aufbau am Ender 3 Pro](https://github.com/raphi2/Filamentwaage/blob/master/Fotos/Foto_1.jpg?raw=true)
 
-Folgende Website visualisiert das Filamentgewicht auf 0,01g genau und aktualisiert sich alle 5 Sekunden. 
-Mittels Tara Button kann der aktuelle Gewichtswert tariert werden. Dies ist nur notwendig, wenn eine neue Filamentspule mit einer neuen Rolle verwendet wird.
-
-![alt text](https://github.com/raphi2/Filamentwaage/blob/master/Fotos/Website.JPG?raw=true)
 
 ### Challenges
 
