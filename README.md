@@ -28,13 +28,7 @@ Ziele:
 - Mangelnde Genauigkeit der gedruckten Teile machten intensive Nacharbeit notwendig
 - Gewichtszunahme am ruhenden Objekt durch größeren Moment: +0,9g nach 23min 28s 
 
-y-Achse = Gewicht in g
-
-x-Achse = Zeitverlauf hh:minmin:ss
-
 ![alt text](https://github.com/raphi2/Filamentwaage/blob/master/Fotos/Gewichtszunahme_neu.JPG?raw=true)
-
-
 
 ### Verwendete Hardware: 
 
