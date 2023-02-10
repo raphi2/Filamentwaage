@@ -5,6 +5,7 @@ Created by: Bader Raphael, Brockschmidt Sophia, Moser Anna
 ### Zielstellung
 
 Winterchallenge Studiengang Smart Products and Solutions 2022:
+
 Aufgabenstellung: Einbindung der 3D-Filament Drucker im Makers Lab der FH in eine digital factory
 
 Ziele: 
@@ -12,12 +13,16 @@ Ziele:
 - Predictive Maintenance durch geeignete Geräteüberwachung, in diesem Fall des Rohstoffs
 - Überwachung des verbleibenden Filaments
 
-### Challanges
+### Challenges
 
 - Beispielcode des HX711 Wandlers enthält Befehle, welche diesen einerseits regelmäßig in Sleep Mode versetzt, die CPU verlangsamt und das Programm bei Einbindung des Webservers zum Absturz bringt
 - Lötstellen mehrfach ausgerissen
 - Entfernen der Stützkonstruktion
 - Mangelnde Genauigkeit der gedruckten Teile machten intensive Nacharbeit notwendig
+- Gewichtsschwankungen am ruhenden Objekt
+
+
+
 ### Verwendete Hardware: 
 
 - Microcontoller: ESP32 Vroom
@@ -70,6 +75,6 @@ leere & volle Filamentrolle wird mittels Präzisionswaage gewogen und mit Wert d
 
 ![Aufbau am Ender 3 Pro](https://github.com/raphi2/Filamentwaage/blob/master/Fotos/Foto_1.jpg?raw=true)
 
-![Aufbau am Ender 3 Pro](https://github.com/raphi2/Filamentwaage/blob/master/Fotos/Website.jpg?raw=true)
+![alt text](https://github.com/raphi2/Filamentwaage/blob/master/Fotos/Website.JPG?raw=true)
 
 
