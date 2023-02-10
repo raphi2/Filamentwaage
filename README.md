@@ -44,7 +44,7 @@ x-Achse = Zeitverlauf hh:minmin:ss
 - Schrauben: 2x M5x20mm / 2x M4x20mm
 - diverse Jumperkabel
 - Steckboard
-- additiv gefertigte Halterung für Wägezelle (siehe Ordner 3D)
+- additiv gefertigte Halterung für Wägezelle ([siehe Ordner3D](3D))
 
 ### Verwendete Bibliotheken:
 - HX711  
