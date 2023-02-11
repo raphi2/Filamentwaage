@@ -47,7 +47,7 @@ Ziele:
 ![alt text](https://github.com/raphi2/Filamentwaage/blob/master/Fotos/ESP32.jpg?raw=true)
 
 ### Kalibrierfaktor bestimmen
-Für eine aussagekräftige Gewichtsausgabe wurde zunächst der Kalibrierfaktor der Wägezelle mittels Normgewicht (100g) bestimmt. 
+Für eine aussagekräftige Gewichtsangabe wurde zunächst der Kalibrierfaktor der Wägezelle mittels Normgewicht (100g) bestimmt. 
 Kalibrierfaktor = angezeigter Wert 48466 / 100g 
 
 -> der Kalibrierfaktor wurde im Programmcode ergänzt:
@@ -87,11 +87,11 @@ Grün: Halterung / Orange: Auflage Spule
 Beim Probedruck eines ca. 1,5g schweren Deckels ist eine eine Zunahme des angezeigten Gewichtswerts sichtbar, wobei nach Ende des Drucks die Gewichtszunahme bei a. 4g war. Der Druck wurde um 18:08 gestartet und endete um 18:28.
 ![alt text](https://github.com/raphi2/Filamentwaage/blob/master/Fotos/Druckversuch.JPG?raw=true)
 
-Mögliche Ursachen für die Zunahme sind möglich:
+Mögliche Ursachen für die Zunahme sind:
 - Aufgrund des Filamentvorschubs am 3D Drucker entstehen Zugkraft an der Filamentspule 
-  - mögliche Lösung: andere Zuführung des Filaments, ggf Umlenkung
+- mögliche Lösung: andere Zuführung des Filaments, ggf Umlenkung
 - Die Filamentspule ist unwucht, wodurch die großen Sprünge bei der Messung entstehen
-- Zu geringe Gewichtsabnahme des Filaments, daher 
+- Zu geringe Gewichtsabnahme des Filaments 
 
 ### Fazit
 
@@ -111,11 +111,11 @@ Aufbau der Filamentwaage am Ender 3 Pro.
 
 #### Mögliche Verbesserungen
 
-- andere Zuführung des Filaments, ggf Umlenkung
-- widerstandsarme Lagerung der Filamentspult, durch bspw. Kugellager
-- Integration eines Grafen auf der Webseite, zur Darstellung des Gewichts über eine bestimmte Zeitperiode
+- andere Zuführung des Filaments, ggf. Umlenkung
+- widerstandsarme Lagerung der Filamentspule, durch bspw. Kugellager
+- Integration eines Graphen auf der Webseite zur Darstellung des Gewichts über eine bestimmte Zeitperiode
 - Algorithmus implementieren, der die Messabweichungen während des Drucks kompensiert
-- Algorithmus implementieren, der den nächsten Wechsel der Filamentspule vorrausagt
-- Anpassung des Messintervalls am Spulenverbrauch
+- Algorithmus implementieren, der den nächsten Wechsel der Filamentspule voraussagt
+- Anpassung des Messintervalls an Spulenverbrauch
 
 
