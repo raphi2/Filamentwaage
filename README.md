@@ -113,7 +113,7 @@ Aufbau der Filamentwaage am Ender 3 Pro.
 
 #### Mögliche Verbesserungen
 
-- andere Zuführung des Filaments, ggf. Umlenkung
+- andere Zuführung bzw. Umlenkung des Filaments zur Reduktion der Zugkräfte
 - widerstandsarme Lagerung der Filamentspule, durch bspw. Kugellager
 - Integration eines Graphen auf der Webseite zur Darstellung des Gewichts über eine bestimmte Zeitperiode
 - Algorithmus implementieren, der die Messabweichungen während des Drucks kompensiert
