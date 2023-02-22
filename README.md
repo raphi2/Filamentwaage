@@ -91,9 +91,9 @@ Beim Probedruck eines ca. 1,5g schweren Deckels ist eine eine Zunahme des angeze
 
 Mögliche Ursachen für die Zunahme sind:
 - Aufgrund des Filamentvorschubs am 3D Drucker entstehen Zugkraft an der Filamentspule 
-- mögliche Lösung: andere Zuführung des Filaments, ggf Umlenkung
+  - mögliche Lösung: andere Zuführung des Filaments, ggf Umlenkung vorsehen
 - Die Filamentspule ist unwucht, wodurch die großen Sprünge bei der Messung entstehen
-- Zu geringe Gewichtsabnahme des Filaments 
+- Zu geringe Gewichtsabnahme des Filaments für eine Aussagekräftige Messung
 
 ### Fazit
 
@@ -119,5 +119,3 @@ Aufbau der Filamentwaage am Ender 3 Pro.
 - Algorithmus implementieren, der die Messabweichungen während des Drucks kompensiert
 - Algorithmus implementieren, der den nächsten Wechsel der Filamentspule voraussagt
 - Anpassung des Messintervalls an Spulenverbrauch
-
-
