@@ -60,7 +60,7 @@ Um die Richtigkeit des Kalibrierungsfaktor zu überprüfen wurde anschließend d
 
 Folgende Website visualisiert das Filamentgewicht auf 0,01g genau und aktualisiert die Messung alle 5 Sekunden. 
 Mittels Tara Button kann der aktuelle Gewichtswert tariert werden. Dies ist nur notwendig, wenn eine neue Filamentspule mit einer neuen Rolle verwendet wird. 
-Desweiteren kann die Firmware des Microcontoller über Over-the-Air-Update aktualisiert werden [Link](10.0.8.146/update)
+Desweiteren kann die Firmware des Microcontoller über Over-the-Air-Update aktualisiert werden: [10.0.8.146/update](10.0.8.146/update)
 
 Screenshot der Webseite:
 ![alt text](https://github.com/raphi2/Filamentwaage/blob/master/Fotos/Website.JPG?raw=true)
