@@ -93,7 +93,7 @@ Mögliche Ursachen für die Zunahme sind:
 - Aufgrund des Filamentvorschubs am 3D Drucker entstehen Zugkraft an der Filamentspule 
   - mögliche Lösung: andere Zuführung des Filaments, ggf Umlenkung vorsehen
 - Die Filamentspule ist unwucht, wodurch die großen Sprünge bei der Messung entstehen
-- Zu geringe Gewichtsabnahme des Filaments für eine Aussagekräftige Messung
+- Zu geringe Gewichtsabnahme des Filaments für eine aussagekräftige Messung
 
 ### Fazit
 
@@ -106,7 +106,7 @@ Die grüne Linie visualisiert eine Messung, die gelbe Linie den Mittelwert aus 1
 
 Um eine aussagekräftige Gewichtsmessung zu erhalten, muss die Wägezelle vor Inbetriebnahme auf Raumtemperatur gebracht werden. 
 
-Für ein aussagekräftiges Ergebnis des Projekts muss noch eine Langzeit während eines Drucks gemacht werden. Nur dann kann die Korrektheit der Messung während des Betriebs überprüft, bzw. korrigiert werden.
+Für ein finales Ergebnis des Projekts muss noch eine Langzeitmessung während eines längeren Drucks gemacht werden. Nur dann kann die Korrektheit der Messung während des Betriebs überprüft, bzw. korrigiert werden.
 
 Aufbau der Filamentwaage am Ender 3 Pro.
 ![Aufbau am Ender 3 Pro](https://github.com/raphi2/Filamentwaage/blob/master/Fotos/Foto_1.jpg?raw=true)
