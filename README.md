@@ -6,7 +6,7 @@ Konzept und Umsetzung: Bader Raphael, Brockschmidt Sophia, Moser Anna
 
 [Link zum Grafana Dashboard](http://217.160.37.170:3000/d/aa0QPgJ4z/wagezelle-ender-3-pro?from=1676030184659&to=1676051784659&viewPanel=2&orgId=1&theme=dark)
 
-Lokale Webseite der Waage aufrufbar unter: [10.0.8.146](10.0.8.146)
+Lokale Webseite der Waage aufrufbar unter: [10.0.8.146](http://10.0.8.146)
 
 ### Zielstellung
 
@@ -60,7 +60,7 @@ Um die Richtigkeit des Kalibrierungsfaktor zu überprüfen wurde anschließend d
 
 Folgende Website visualisiert das Filamentgewicht auf 0,01g genau und aktualisiert die Messung alle 5 Sekunden. 
 Mittels Tara Button kann der aktuelle Gewichtswert tariert werden. Dies ist nur notwendig, wenn eine neue Filamentspule mit einer neuen Rolle verwendet wird. 
-Desweiteren kann die Firmware des Microcontoller über Over-the-Air-Update aktualisiert werden: [10.0.8.146/update](10.0.8.146/update)
+Desweiteren kann die Firmware des Microcontoller über Over-the-Air-Update aktualisiert werden: [10.0.8.146/update](http://10.0.8.146/update)
 
 Screenshot der Webseite:
 ![alt text](https://github.com/raphi2/Filamentwaage/blob/master/Fotos/Website.JPG?raw=true)
