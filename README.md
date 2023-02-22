@@ -76,10 +76,12 @@ Grün: Halterung / Orange: Auflage Spule
 
 ### Challenges
 
-- Beispielcode des HX711 Wandlers enthält Befehle, welche diesen einerseits regelmäßig in Sleep Mode versetzt, die CPU verlangsamt und das Programm bei Einbindung des Webservers zum Absturz bringt
-- Lötstellen mehrfach ausgerissen
+Folgende Challeges sind während der implemenation des Konzepts aufgetreten.
+
+- Der Beispielcode des HX711 Wandlers enthält Befehle, welche den Microcontroller regelmäßig in den Sleep Mode versetzt, wodurch das Programm bei Einbindung des Webservers zum Absturz gebracht wird.
+- Die Lötstellen sind mehrfach ausgerissen
 - Entfernen der Stützstruktur der additiv gefertigten Halterung
-- Mangelnde Genauigkeit der gedruckten Teile machten intensive Nacharbeit notwendig
+  - Mangelnde Genauigkeit der gedruckten Teile machten intensive Nacharbeit notwendig
 - Gewichtszunahme am ruhenden Objekt durch Wärmeausdehnung: +0,9g nach 23min 28s
 
 ![alt text](https://github.com/raphi2/Filamentwaage/blob/master/Fotos/Gewichtszunahme_neu.JPG?raw=true)
